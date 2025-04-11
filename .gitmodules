@@ -1,0 +1,9 @@
+[submodule "thirdparty/lodepng/lodepng"]
+	path = thirdparty/lodepng/lodepng
+	url = https://github.com/lvandeve/lodepng.git
+[submodule "thirdparty/libjpeg-turbo/libjpeg-turbo"]
+	path = thirdparty/libjpeg-turbo/libjpeg-turbo
+	url = https://github.com/libjpeg-turbo/libjpeg-turbo.git
+[submodule "thirdparty/imageview"]
+	path = thirdparty/imageview
+	url = https://github.com/alexanderbelous/imageview.git
