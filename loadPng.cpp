@@ -2,7 +2,7 @@
 
 #include <ImageIO/readBinaryFile.h>
 
-#include <lodepng/lodepng.h>
+#include <ImageIO/thirdparty/lodepng/lodepng.h>
 
 #include <cstdlib>
 #include <stdexcept>

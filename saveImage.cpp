@@ -1,6 +1,6 @@
 #include <ImageIO/saveImage.h>
 
-#include <lodepng/lodepng.h>
+#include <ImageIO/thirdparty/lodepng/lodepng.h>
 
 #include <stdexcept>
 

@@ -3,7 +3,7 @@
 #include <ImageIO/BitmapImpl.h>
 #include <ImageIO/readBinaryFile.h>
 
-#include <libjpeg-turbo/src/turbojpeg.h>
+#include <turbojpeg.h>
 
 #include <fstream>
 #include <stdexcept>
