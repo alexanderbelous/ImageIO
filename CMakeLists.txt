@@ -32,23 +32,10 @@ target_include_directories(ImageIO PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
 # Thirdparty libraries:
 add_subdirectory(thirdparty/imageview EXCLUDE_FROM_ALL)
 # libjpeg-turbo is "special", it cannot be added via add_subdirectory().
-find_package(JpegTurbo)
+find_package(JpegTurbo REQUIRED)
 
 target_link_libraries(ImageIO PUBLIC imageview)
 target_link_libraries(ImageIO PRIVATE libjpeg-turbo)
-
-# Enable Whole Program Optimization in Release if it's supported.
-include(CheckIPOSupported)
-check_ipo_supported(RESULT IPO_SUPPORTED)
-if(IPO_SUPPORTED)
-  set_target_properties(ImageIO PROPERTIES
-    INTERPROCEDURAL_OPTIMIZATION TRUE
-    INTERPROCEDURAL_OPTIMIZATION_DEBUG FALSE
-    INTERPROCEDURAL_OPTIMIZATION_RELEASE TRUE
-    INTERPROCEDURAL_OPTIMIZATION_RELWITHDEBINFO TRUE
-    INTERPROCEDURAL_OPTIMIZATION_MINSIZEREL TRUE
-  )
-endif()
 
 # Set warning level
 if(MSVC)
